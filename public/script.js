@@ -5,11 +5,11 @@ var colorscale = d3.scale.category10();
 
 //Legend titles
 var LegendOptions = ['Project 1','Project 2'];
-var test = 0.80
+
 //Data
 var d = [
 		  [
-			{axis:"Cost Efficiency",value: test},
+			{axis:"Cost Efficiency",value: 0.80},
 			{axis:"Institutional Capacity",value:0.56},
 			{axis:"Exposure Reduction",value:0.42},
 			{axis:"Social Benefits",value:0.34},
