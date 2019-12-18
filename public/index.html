@@ -5,6 +5,7 @@
   <title>Radar chart</title>
     <script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="RadarChart.js"></script>
+	<script src="script.js"></script>
 	<style>
 		body {
 		  overflow: hidden;
@@ -25,7 +26,7 @@
 	<div id="inputs">
 	
 		  <p5>Project 1 Details:</p5>
-		<input id="pr1-ce" type="text" placeholder="Cost Efficiency" />
+		<input id="pr1-ce" type="number" placeholder="Cost Efficiency" />
 		<input id="pr1-ic" type="text" placeholder="Institutional Capacity" />
 		<input id="pr1-er" type="text" placeholder="Exposure Reduction" />
 		<input id="pr1-sb" type="text" placeholder="Social Benefits" />
@@ -53,7 +54,7 @@
 	<script type="text/javascript" src="script.js"></script>
 	
 	<script>
-	
+	var test = 0.80
 	function refreshFunc() {
 
 		document.location.reload(true)

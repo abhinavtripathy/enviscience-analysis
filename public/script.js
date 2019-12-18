@@ -9,7 +9,7 @@ var LegendOptions = ['Project 1','Project 2'];
 //Data
 var d = [
 		  [
-			{axis:"Cost Efficiency",value: document.getElementById("pr1-ce").value},
+			{axis:"Cost Efficiency",value: test},
 			{axis:"Institutional Capacity",value:0.56},
 			{axis:"Exposure Reduction",value:0.42},
 			{axis:"Social Benefits",value:0.34},
