@@ -5,7 +5,7 @@ var colorscale = d3.scale.category10();
 
 //Legend titles
 var LegendOptions = ['Project 1','Project 2'];
-
+var test = 0.80
 //Data
 var d = [
 		  [
