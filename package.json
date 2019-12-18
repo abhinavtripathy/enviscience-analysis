@@ -1,0 +1,19 @@
+{
+  "name": "enviscience-analysis",
+  "version": "1.0.0",
+  "description": "Analyzing costs and benefits of environmental science projects through visualizations",
+  "main": "index.js",
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/abhinavtripathy/enviscience-analysis.git"
+  },
+  "author": "Abhinav Tripathy",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/abhinavtripathy/enviscience-analysis/issues"
+  },
+  "homepage": "https://github.com/abhinavtripathy/enviscience-analysis#readme"
+}
