@@ -5,7 +5,6 @@
   <title>Radar chart</title>
     <script src="http://d3js.org/d3.v3.min.js"></script>
 	<script src="RadarChart.js"></script>
-	<script src="script.js"></script>
 	<style>
 		body {
 		  overflow: hidden;
@@ -52,15 +51,30 @@
 	
 	
 	<script type="text/javascript" src="script.js"></script>
-	
-	<script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
 
-	d[0][0]['value'] = 0.1
-	console.log(d[0][0]['value'])
+	<script src="key.js"></script>
+<script>
+  
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  var db = firebase.firestore();
 
+  db.collection("projects").doc("project1").set({
+    pr1_ce: 0.90
+
+	})
+	.then(function() {
+		console.log("Document successfully written!");
+	})
+	.catch(function(error) {
+		console.error("Error writing document: ", error);
+	});
+
+
+</script>
 	
-	
-	</script>
 
   </body>
 </html>
