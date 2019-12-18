@@ -12,20 +12,20 @@ var d = [
 			{axis:"Cost Efficiency",value:0.59},
 			{axis:"Institutional Capacity",value:0.56},
 			{axis:"Exposure Reduction",value:0.42},
-			{axis:"News Sportsites",value:0.34},
-			{axis:"Search Engine",value:0.48},
-			{axis:"View Shopping sites",value:0.14},
-			{axis:"Paying Online",value:0.11},
-			{axis:"Buy Online",value:0.05}
+			{axis:"Social Benefits",value:0.34},
+			{axis:"Participatory Process",value:0.48},
+			{axis:"GHG Reduction",value:0.14},
+			{axis:"Adaptation Over Time",value:0.11},
+			{axis:"Ecological Ehancement",value:0.05}
 		  ],[
-			{axis:"Email",value:0.48},
-			{axis:"Social Networks",value:0.41},
-			{axis:"Internet Banking",value:0.27},
-			{axis:"News Sportsites",value:0.28},
-			{axis:"Search Engine",value:0.46},
-			{axis:"View Shopping sites",value:0.29},
-			{axis:"Paying Online",value:0.11},
-			{axis:"Buy Online",value:0.14}
+			{axis:"Cost Efficiency",value:0.70},
+			{axis:"Institutional Capacity",value:0.80},
+			{axis:"Exposure Reduction",value:0.20},
+			{axis:"Social Benefits",value:0.30},
+			{axis:"Participatory Process",value:0.04},
+			{axis:"GHG Reduction",value:0.50},
+			{axis:"Adaptation Over Time",value:0.60},
+			{axis:"Ecological Ehancement",value:0.75}
 		  ]
 		];
 
