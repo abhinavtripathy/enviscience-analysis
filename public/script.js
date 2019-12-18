@@ -9,9 +9,9 @@ var LegendOptions = ['Project 1','Project 2'];
 //Data
 var d = [
 		  [
-			{axis:"Email",value:0.59},
-			{axis:"Social Networks",value:0.56},
-			{axis:"Internet Banking",value:0.42},
+			{axis:"Cost Efficiency",value:0.59},
+			{axis:"Institutional Capacity",value:0.56},
+			{axis:"Exposure Reduction",value:0.42},
 			{axis:"News Sportsites",value:0.34},
 			{axis:"Search Engine",value:0.48},
 			{axis:"View Shopping sites",value:0.14},
