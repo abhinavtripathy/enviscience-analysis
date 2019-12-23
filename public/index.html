@@ -5,6 +5,7 @@
     <div id="inputs">
 	
         <p5>Project 1 Details:</p5>
+        <input id="pr1-name" type="text" placeholder="Project Title" />
       <input id="pr1-ce" type="number" placeholder="Cost Efficiency" />
       <input id="pr1-ic" type="text" placeholder="Institutional Capacity" />
       <input id="pr1-er" type="text" placeholder="Exposure Reduction" />
@@ -13,33 +14,34 @@
       <input id="pr1-gr" type="text" placeholder="GHG Reduction" />
       <br>
       <p5>Project 2 Details:</p5>
+      <input id="pr2-name" type="text" placeholder="Project Title" />
       <input id="pr2-ce" type="text" placeholder="Cost Efficiency" />
       <input id="pr2-ic" type="text" placeholder="Institutional Capacity" />
       <input id="pr2-er" type="text" placeholder="Exposure Reduction" />
       <input id="pr2-sb" type="text" placeholder="Social Benefits" />
       <input id="pr2-pp" type="text" placeholder="Participatory Process" />
       <input id="pr2-gr" type="text" placeholder="GHG Reduction" />
-      <button onclick="refreshFunc()">Submit</button>
+      <button onclick="submit()">Submit</button>
     
     
     </div>
-    <div id="success">
-
-
-
-    </div>
-      
+    <div id="success"></div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
     <script src="key.js"></script>
     
     <script>
-    
+    var success = document.getElementById("success")
+    success.style.display = "none";
+
+
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     var db = firebase.firestore();
-    
+
+    function submit() {
+
     db.collection("projects").doc("project1").set({
     pr1_ce: 0.90
     
@@ -50,6 +52,11 @@
     .catch(function(error) {
       console.error("Error writing document: ", error);
     });
+    
+
+
+    }
+    
     
     
     </script>
