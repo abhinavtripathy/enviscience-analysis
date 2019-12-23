@@ -39,21 +39,43 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     var db = firebase.firestore();
-
+    var check = 0
     function submit() {
 
-    db.collection("projects").doc("project1").set({
+    db.collection("projects").doc(document.getElementById("pr1-name").value).set({
     pr1_ce: 0.90
     
     })
     .then(function() {
       console.log("Document successfully written!");
-      success.style.display = "block";
+      check++;
     })
     .catch(function(error) {
       console.error("Error writing document: ", error);
-      alert("Something went wrong, try again!")
+      alert("Something went wrong with project 1, try again!")
     });
+
+    db.collection("projects").doc(document.getElementById("pr2-name").value).set({
+    pr1_ce: 0.90
+    
+    })
+    .then(function() {
+      console.log("Document successfully written!");
+      check++;
+    })
+    .catch(function(error) {
+      console.error("Error writing document: ", error);
+      alert("Something went wrong with project 1, try again!")
+    });
+
+    if(check == 2) {
+
+        success.style.display = "block";
+
+    }
+    else {
+        alert("Something went wrong")
+    }
 
     }
     
