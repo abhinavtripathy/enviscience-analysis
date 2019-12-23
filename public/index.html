@@ -1,79 +1,51 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-  <title>Radar chart</title>
-    <script src="http://d3js.org/d3.v3.min.js"></script>
-	<script src="RadarChart.js"></script>
-	<style>
-		body {
-		  overflow: hidden;
-		  margin: 0;
-		  font-size: 14px;
-		  font-family: "Helvetica Neue", Helvetica;
-		  
-		}
-
-		#chart {
-		  position: absolute;
-		  top: 50px;
-		  left: 100px;
-		}	
-	</style>
-  </head>
-  <body>
-	<div id="inputs">
+<div id="inputs">
 	
-		  <p5>Project 1 Details:</p5>
-		<input id="pr1-ce" type="number" placeholder="Cost Efficiency" />
-		<input id="pr1-ic" type="text" placeholder="Institutional Capacity" />
-		<input id="pr1-er" type="text" placeholder="Exposure Reduction" />
-		<input id="pr1-sb" type="text" placeholder="Social Benefits" />
-		<input id="pr1-pp" type="text" placeholder="Participatory Process" />
-		<input id="pr1-gr" type="text" placeholder="GHG Reduction" />
-		<br>
-		<p5>Project 2 Details:</p5>
-		<input id="pr2-ce" type="text" placeholder="Cost Efficiency" />
-		<input id="pr2-ic" type="text" placeholder="Institutional Capacity" />
-		<input id="pr2-er" type="text" placeholder="Exposure Reduction" />
-		<input id="pr2-sb" type="text" placeholder="Social Benefits" />
-		<input id="pr2-pp" type="text" placeholder="Participatory Process" />
-		<input id="pr2-gr" type="text" placeholder="GHG Reduction" />
-		<button onclick="refreshFunc()">Submit</button>
+    <p5>Project 1 Details:</p5>
+  <input id="pr1-ce" type="number" placeholder="Cost Efficiency" />
+  <input id="pr1-ic" type="text" placeholder="Institutional Capacity" />
+  <input id="pr1-er" type="text" placeholder="Exposure Reduction" />
+  <input id="pr1-sb" type="text" placeholder="Social Benefits" />
+  <input id="pr1-pp" type="text" placeholder="Participatory Process" />
+  <input id="pr1-gr" type="text" placeholder="GHG Reduction" />
+  <br>
+  <p5>Project 2 Details:</p5>
+  <input id="pr2-ce" type="text" placeholder="Cost Efficiency" />
+  <input id="pr2-ic" type="text" placeholder="Institutional Capacity" />
+  <input id="pr2-er" type="text" placeholder="Exposure Reduction" />
+  <input id="pr2-sb" type="text" placeholder="Social Benefits" />
+  <input id="pr2-pp" type="text" placeholder="Participatory Process" />
+  <input id="pr2-gr" type="text" placeholder="GHG Reduction" />
+  <button onclick="refreshFunc()">Submit</button>
 
 
-	  </div>
-    <div id="body">
-		
-	  <div id="chart"></div>
-	</div>
-	
-	
-	<script type="text/javascript" src="script.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
-	<script src="key.js"></script>
+</div>
+<div id="body">
+  
+<div id="chart"></div>
+</div>
+
+
+<script type="text/javascript" src="script.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+<script src="key.js"></script>
 
 <script>
-  
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  var db = firebase.firestore();
 
-  db.collection("projects").doc("project1").set({
-    pr1_ce: 0.90
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
 
-	})
-	.then(function() {
-		console.log("Document successfully written!");
-	})
-	.catch(function(error) {
-		console.error("Error writing document: ", error);
-	});
+db.collection("projects").doc("project1").set({
+pr1_ce: 0.90
+
+})
+.then(function() {
+  console.log("Document successfully written!");
+})
+.catch(function(error) {
+  console.error("Error writing document: ", error);
+});
 
 
 </script>
-	
-
-  </body>
-</html>
