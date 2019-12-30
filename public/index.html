@@ -33,21 +33,12 @@
     
     
     </div>
-    <div id="success">
-
-      <center>
-      <h3>Success!</h3>
-    </center>
-    </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
     <script src="key.js"></script>
     
     <script>
-    var success = document.getElementById("success")
-    success.style.display = "none";
-
 
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
@@ -79,7 +70,8 @@
     })
     .then(function() {
       console.log("Document successfully written!");
-      success.style.display = "block";
+      
+      window.location.href = "file:///C:/Users/Abhinav%20Tripathy/Documents/Projects/enviscience-analysis/public/chart.html";
     })
     .catch(function(error) {
       console.error("Error writing document: ", error);
