@@ -1,4 +1,4 @@
-# enviscience-analysis
+# enviz
 
 [![Build Status](https://travis-ci.org/abhinavtripathy/enviscience-analysis.svg?branch=master)](https://travis-ci.org/abhinavtripathy/enviscience-analysis)
 [![License](http://img.shields.io/badge/License-MIT-brightgreen.svg)](./LICENSE)
