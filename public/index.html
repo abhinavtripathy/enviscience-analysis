@@ -31,8 +31,9 @@
     </div>
     <div id="success">
 
-      <h5>Success!</h5>
-
+      <center>
+      <h3>Success!</h3>
+    </center>
     </div>
     </div>
     <script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
@@ -56,19 +57,8 @@
     pr1_er: document.getElementById("pr1-er").value,
     pr1_sb: document.getElementById("pr1-sb").value,
     pr1_pp: document.getElementById("pr1-pp").value,
-    pr1_gr: document.getElementById("pr1-gr").value
-    
-    })
-    .then(function() {
-      console.log("Document successfully written!");
-      check++;
-    })
-    .catch(function(error) {
-      console.error("Error writing document: ", error);
-      alert("Something went wrong with project 1, try again!")
-    });
+    pr1_gr: document.getElementById("pr1-gr").value,
 
-    db.collection("projects").doc("project2").set({
     pr2_ce: document.getElementById("pr2-ce").value,
     pr2_ic: document.getElementById("pr2-ce").value,
     pr2_er: document.getElementById("pr2-er").value,
@@ -79,23 +69,14 @@
     })
     .then(function() {
       console.log("Document successfully written!");
-      check++;
+      success.style.display = "block";
     })
     .catch(function(error) {
       console.error("Error writing document: ", error);
       alert("Something went wrong with project 1, try again!")
     });
 
-    if(check == 2) {
-
-        success.style.display = "block";
-
-    }
-    else {
-
-        alert("Something went wrong")
     
-    }
 
     }
     
