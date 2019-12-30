@@ -42,7 +42,7 @@
     var check = 0
     function submit() {
 
-    db.collection("projects").doc(document.getElementById("pr1-name").value).set({
+    db.collection("projects").doc("project1").set({
     pr1_ce: document.getElementById("pr1-ce").value,
     pr1_ic: document.getElementById("pr1-ce").value,
     pr1_er: document.getElementById("pr1-er").value,
