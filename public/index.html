@@ -70,8 +70,10 @@
     })
     .then(function() {
       console.log("Document successfully written!");
-      
-      window.location.href = "file:///C:/Users/Abhinav%20Tripathy/Documents/Projects/enviscience-analysis/public/chart.html";
+      // Dev
+      // window.location.href = "file:///C:/Users/Abhinav%20Tripathy/Documents/Projects/enviscience-analysis/public/chart.html";
+      // Production
+      window.location.href = "";
     })
     .catch(function(error) {
       console.error("Error writing document: ", error);
