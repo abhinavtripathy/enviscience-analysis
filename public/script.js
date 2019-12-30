@@ -1,9 +1,22 @@
-<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
-<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
-<script src="key.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+<script type="text/javascript" src="key.js"></script>
 
 firebase.initializeApp(firebaseConfig);
 var db = firebase.firestore();
+
+var docRef = db.collection("projects").doc("project1");
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+		// console.log("Document data:", doc.data());
+		console.log(doc.data())
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
 
 var w = 500,
 	h = 500;
@@ -16,7 +29,7 @@ var LegendOptions = ['Project 1','Project 2'];
 //Data
 var d = [
 		  [
-			{axis:"Cost Efficiency",value: 0.80},
+			{axis:"Cost Efficiency",value: },
 			{axis:"Institutional Capacity",value:0.56},
 			{axis:"Exposure Reduction",value:0.42},
 			{axis:"Social Benefits",value:0.34},
