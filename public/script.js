@@ -1,3 +1,10 @@
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.6.0/firebase-firestore.js"></script>
+<script src="key.js"></script>
+
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
+
 var w = 500,
 	h = 500;
 

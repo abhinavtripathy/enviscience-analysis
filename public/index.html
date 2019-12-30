@@ -48,7 +48,7 @@
     // Initialize Firebase
     firebase.initializeApp(firebaseConfig);
     var db = firebase.firestore();
-    var check = 0
+  
     function submit() {
 
     db.collection("projects").doc("project1").set({
