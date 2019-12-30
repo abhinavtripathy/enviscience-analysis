@@ -1,5 +1,9 @@
 <html>
+  <head>
 
+    <title>Analysis</title>
+
+  </head>
     <div id="body">
 
     <div id="inputs">
@@ -64,7 +68,7 @@
       alert("Something went wrong with project 1, try again!")
     });
 
-    db.collection("projects").doc(document.getElementById("pr2-name").value).set({
+    db.collection("projects").doc("project2").set({
     pr1_ce: 0.90
     
     })
