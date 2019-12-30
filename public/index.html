@@ -52,6 +52,7 @@
     function submit() {
 
     db.collection("projects").doc("project1").set({
+    pr1_name: document.getElementById("pr1-name").value,
     pr1_ce: document.getElementById("pr1-ce").value,
     pr1_ic: document.getElementById("pr1-ce").value,
     pr1_er: document.getElementById("pr1-er").value,
@@ -59,6 +60,7 @@
     pr1_pp: document.getElementById("pr1-pp").value,
     pr1_gr: document.getElementById("pr1-gr").value,
 
+    pr2_name: document.getElementById("pr2-name").value,
     pr2_ce: document.getElementById("pr2-ce").value,
     pr2_ic: document.getElementById("pr2-ce").value,
     pr2_er: document.getElementById("pr2-er").value,
@@ -79,7 +81,6 @@
     
 
     }
-    
     
     
     </script>
