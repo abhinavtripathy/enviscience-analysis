@@ -53,7 +53,7 @@ docRef.get().then(function(doc) {
 var colorscale = d3.scale.category10();
 
 //Legend titles
-var LegendOptions = ['Project 1','Project 2'];
+var LegendOptions = [doc.data()['pr1_name'],doc.data()['pr2_name']];
 
 //Data
 var d = [
@@ -109,7 +109,7 @@ var text = svg.append("text")
 	.attr("y", 10)
 	.attr("font-size", "12px")
 	.attr("fill", "#404040")
-	.text("Cost/Benefit Analysis of Project 1 and Project 2");
+	.text("Cost/Benefit Analysis of " + doc.data()['pr1_name'] + " and " + doc.data()['pr2_name']);
 		
 //Initiate Legend	
 var legend = svg.append("g")
