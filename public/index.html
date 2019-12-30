@@ -55,8 +55,8 @@
     pr1_ic: document.getElementById("pr1-ce").value,
     pr1_er: document.getElementById("pr1-er").value,
     pr1_sb: document.getElementById("pr1-sb").value,
-    pr1_ic: document.getElementById("pr1-ce").value,
-
+    pr1_pp: document.getElementById("pr1-pp").value,
+    pr1_gr: document.getElementById("pr1-gr").value
     
     })
     .then(function() {
@@ -69,7 +69,12 @@
     });
 
     db.collection("projects").doc("project2").set({
-    pr1_ce: 0.90
+    pr2_ce: document.getElementById("pr2-ce").value,
+    pr2_ic: document.getElementById("pr2-ce").value,
+    pr2_er: document.getElementById("pr2-er").value,
+    pr2_sb: document.getElementById("pr2-sb").value,
+    pr2_pp: document.getElementById("pr2-pp").value,
+    pr2_gr: document.getElementById("pr2-gr").value
     
     })
     .then(function() {
