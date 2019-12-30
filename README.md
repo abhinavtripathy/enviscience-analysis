@@ -6,4 +6,4 @@
 Analyzing costs and benefits of environmental science projects through visualizations. 
 
 ## Demo
-![pic of program in normal use](../assets/demo.png?raw=true)
+![pic of program in normal use](assets/demo.png?raw=true)
