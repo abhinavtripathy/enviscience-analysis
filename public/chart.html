@@ -44,21 +44,10 @@ var testVar = 0;
 var docRef = db.collection("projects").doc("project1");
 docRef.get().then(function(doc) {
     if (doc.exists) {
-		testVar = doc.data()['pr1_ce']
-		console.log(doc.data()['pr1_ce'])
-    } else {
-        // doc.data() will be undefined in this case
-        console.log("No such document!");
-    }
-}).catch(function(error) {
-    console.log("Error getting document:", error);
-});
+	
+		console.log(doc.data())
 
-
-console.log(testVar)
-
-// Script.js
-var w = 500,
+		var w = 500,
 	h = 500;
 
 var colorscale = d3.scale.category10();
@@ -69,9 +58,9 @@ var LegendOptions = ['Project 1','Project 2'];
 //Data
 var d = [
 		  [
-			{axis:"Cost Efficiency",value: 0.90},
-			{axis:"Institutional Capacity",value:0.56},
-			{axis:"Exposure Reduction",value:0.42},
+			{axis:"Cost Efficiency",value: doc.data()['pr1_ce']},
+			{axis:"Institutional Capacity",value: doc.data()['pr1_ic']},
+			{axis:"Exposure Reduction",value: doc.data()['pr1_er']},
 			{axis:"Social Benefits",value:0.34},
 			{axis:"Participatory Process",value:0.48},
 			{axis:"GHG Reduction",value:0.14},
@@ -151,6 +140,28 @@ var legend = svg.append("g")
 	  .attr("fill", "#737373")
 	  .text(function(d) { return d; })
 	  ;	
+
+
+
+
+
+
+
+
+
+
+
+
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+
+
+// Script.js
 
 
 
