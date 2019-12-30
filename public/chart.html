@@ -37,6 +37,25 @@
 
 <script>
 
+firebase.initializeApp(firebaseConfig);
+var db = firebase.firestore();
+
+var testVar = 0;
+var docRef = db.collection("projects").doc("project1");
+docRef.get().then(function(doc) {
+    if (doc.exists) {
+		testVar = doc.data()['pr1_ce']
+		console.log(doc.data()['pr1_ce'])
+    } else {
+        // doc.data() will be undefined in this case
+        console.log("No such document!");
+    }
+}).catch(function(error) {
+    console.log("Error getting document:", error);
+});
+
+
+console.log(testVar)
 
 // Script.js
 var w = 500,
