@@ -9,4 +9,4 @@ Data, visualization and analysis based on [Buxton, J. and E. Hamin Infield (2019
 Gradients Technical Report -Version 2. Amherst, MA: University of Massachusetts, Amherst.](https://www.umass.edu/larp/center/sustainable-adaptive-gradients-coastal-environment-sage)
 
 ## Demo
-![pic of program in normal use](assets/demo.png?raw=true)
+![pic of program in normal use](assets/demo.gif?raw=true)
